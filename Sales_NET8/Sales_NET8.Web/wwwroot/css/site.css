@@ -1,22 +1,25 @@
-html {
-  font-size: 14px;
+/* Garantir que o HTML e o body ocupem a altura completa da janela */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Configurar o body para usar Flexbox e empurrar o conteúdo para preencher a altura restante */
 body {
-  margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Configurar o main para ocupar o espaço restante */
+main {
+    flex: 1;
+}
+
+/* Estilo para o footer */
+footer {
+    background-color: #f8f9fa; /* Cor de fundo do rodapé */
+    padding: 10px; /* Espaçamento interno do rodapé */
+    text-align: center;
+    border-top: 1px solid #ddd; /* Borda superior opcional */
+    width: 100%;
 }
